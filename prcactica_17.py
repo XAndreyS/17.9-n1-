@@ -70,7 +70,7 @@ except RuntimeError:
 else:
     print('Используется линеный алгоритм поиска,это может занять больше времени')
     def find(array, element):
-        for i, a in enumerate(array):  # про enumirate см. вмодуле 13.7
+        for i, a in enumerate(array):
             if a == element:
                 return i
         return False
@@ -86,18 +86,13 @@ print(f'Введённая последовательность чисел:{" ".
 print(f'Введённое число:{number}')
 print(f'Количество повторени введённого числа {number}:{count(numbers,number)} раз(а)')
 print(f'Осортированная последовательность введённых чисел:{" ".join(map(str,for_index_number))}')
-if count_number == 1 and not RecursionError:
+if count_number == 1:
     print(f'Индекс предыдущего числа:{binary_seearch(for_index_number,number,min_index, max_index)-1}')
+elif count_number > 1 and RecursionError:
+    print(f'Индекс предыдущего числA:{find(for_index_number, number) - 1}')
 else:
-    print(f'Индекс предыдущего числа:{find(for_index_number, number) - 1}')
+    print(f'Индекс предыДущего ЧислA:{binary_seearch(for_index_number, number, min_index, max_index)}')
 
-#    print(f'Индекс предыдущего числа:{binary_seearch(for_index_number, number, min_index, max_index)}')
-#print("Ловим ошибку 4")
-#    while True:
-#        try:
-#
-#        raise
-#
 
 
 
