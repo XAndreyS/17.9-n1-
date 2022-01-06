@@ -5,7 +5,7 @@ start_time = time.time()
 while True: # Исключения. для ввода только целых чисел
     try:
         numbers = list(map(int,input("Введите последовательность чисел через пробел:").split())) # Сосдание списка из введенных пользователем чисел
-        if len(numbers)==0:
+        if len(numbers)==0: #Исклюение для пустого списка
             raise ValueError
     except ValueError as error:
 
@@ -92,17 +92,11 @@ print(f'Введённое число:{number}')
 print(f'Количество повторений введённого числа {number}:{count(numbers,number)} раз(а)')
 print(f'Осортированная последовательность введённых чисел:{" ".join(map(str,for_index_number))}')
 
-#try:
-#    if len(for_index_number) == 1 :
-#        raise ValueError ('В последовательности одно число')
-#except ValueError as error:
-#    print(error)
-#    #print("")
-#    exit()
-try:
+
+try: #Пока таким образом создаём исключение если введенное больше\меньше максимального\минимального в списке последовательности чисел
     if for_min_index> number or number> for_max_index:
         raise ValueError ('Введёное число вне границ введённой последовательности чисел')
-    elif for_min_index == number:
+    elif for_min_index == number: #Исключение если введённое число первое в списке последовательности чисел
         raise ValueError ('Введённое число первое в списке последовательности чисел')
 
 except ValueError as error:
