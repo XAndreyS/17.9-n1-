@@ -5,12 +5,14 @@ start_time = time.time()
 while True: # Исключения. для ввода только целых чисел
     try:
         numbers = list(map(int,input("Введите последовательность чисел через пробел:").split())) # Сосдание списка из введенных пользователем чисел
+        if len(numbers)==0:
+            raise ValueError
     except ValueError as error:
+
         print("Не верный ввод!Вы должны вводить только  цифры,через пробел!")
 
     else:
         break
-
 
 while True:# Исключения. для ввода только целых чисел
     try:
