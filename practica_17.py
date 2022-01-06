@@ -122,3 +122,5 @@ if True:
 
 
 print("--- %s seconds ---" % (time.time() - start_time))
+
+#"Version 3.1 + anotacii 2.3"
